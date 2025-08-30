@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amarjyoti Ply - Next.js Website
 
-## Getting Started
+A modern, responsive website for Shri Om Plywood Pvt. Ltd. built with Next.js 14, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🏗️ Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+amarjyoti/
+├── app/                          # Next.js App Router
+│   ├── (pages)/                  # Route groups for pages
+│   │   ├── about/               # About page
+│   │   ├── products/            # Products page
+│   │   ├── sustainability/      # Sustainability page
+│   │   └── contact/             # Contact page
+│   ├── components/              # Reusable components
+│   │   ├── layout/              # Layout components
+│   │   │   ├── header.tsx       # Site header
+│   │   │   └── footer.tsx       # Site footer
+│   │   ├── site/                # Site-specific components
+│   │   │   ├── hero.tsx         # Hero section
+│   │   │   ├── about.tsx        # About section
+│   │   │   ├── products.tsx     # Products section
+│   │   │   ├── sustainability.tsx # Sustainability section
+│   │   │   ├── clientele.tsx    # Clientele section
+│   │   │   ├── contact-cta.tsx  # Contact CTA section
+│   │   │   └── section-title.tsx # Section title component
+│   │   ├── ui/                  # UI components (shadcn/ui)
+│   │   └── theme-provider.tsx   # Theme provider
+│   ├── hooks/                   # Custom React hooks
+│   ├── lib/                     # Utility functions and constants
+│   │   ├── utils.ts             # Utility functions
+│   │   └── constants.ts         # Shared constants
+│   ├── types/                   # TypeScript type definitions
+│   ├── globals.css              # Global styles
+│   ├── layout.tsx               # Root layout
+│   └── page.tsx                 # Home page
+├── public/                      # Static assets
+│   └── images/                  # Image assets
+├── components.json              # shadcn/ui configuration
+├── next.config.mjs              # Next.js configuration
+├── package.json                 # Dependencies
+├── tailwind.config.js           # Tailwind CSS configuration
+└── tsconfig.json                # TypeScript configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 14** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **shadcn/ui** for UI components
+- **Responsive Design** for all devices
+- **SEO Optimized** with metadata
+- **Performance Optimized** with Next.js optimizations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Installation
 
-## Learn More
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd amarjyoti
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
+```bash
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
+## 🛠️ Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Adding New Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a new folder in `app/(pages)/` for your page
+2. Add a `page.tsx` file with your page component
+3. Update navigation in `app/lib/constants.ts`
+
+### Adding New Components
+
+1. Create components in `app/components/`
+2. Use TypeScript interfaces from `app/types/`
+3. Import shared constants from `app/lib/constants.ts`
+
+### Styling
+
+- Use Tailwind CSS classes for styling
+- Follow the existing design system
+- Use shadcn/ui components when possible
+
+## 📱 Pages
+
+- **Home** (`/`) - Landing page with hero, about, products, and contact sections
+- **About** (`/about`) - Company information and history
+- **Products** (`/products`) - Product catalog and specifications
+- **Sustainability** (`/sustainability`) - Environmental practices and commitments
+- **Contact** (`/contact`) - Contact form and information
+
+## 🎨 Design System
+
+The website uses a consistent design system with:
+- **Colors**: Primary amber/gold theme with neutral grays
+- **Typography**: Playfair Display for headings, system fonts for body text
+- **Spacing**: Consistent spacing using Tailwind's spacing scale
+- **Components**: Reusable UI components from shadcn/ui
+
+## 📄 License
+
+This project is proprietary to Shri Om Plywood Pvt. Ltd.
