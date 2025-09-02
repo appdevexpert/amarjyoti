@@ -331,7 +331,7 @@ export default function Home() {
                   {product.features && (
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                         Ideal Applications
                       </h4>
                       <div className="flex flex-wrap gap-2">
