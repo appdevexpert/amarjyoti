@@ -336,7 +336,7 @@ export default function Home() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {product.features.map((feature, idx) => (
-                          <Badge key={idx} variant="outline" className="border-amber-100 text-green-700 bg-green-50 hover:bg-green-100">
+                          <Badge key={idx} variant="outline"  className="border-amber-300 text-orange-700 bg-orange-50 hover:bg-orange-100">
                             {feature}
                           </Badge>
                         ))}
@@ -344,15 +344,7 @@ export default function Home() {
                     </div>
                   )}
                   
-                  {/* Call to action button */}
-                  <div className="pt-4 border-t border-gray-100">
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-gray-700 text-gray-700 hover:bg-gray-50 hover:border-gray-800"
-                    >
-                      Learn More
-                    </Button>
-                  </div>
+                
                 </div>
               </Card>
             ))}
@@ -533,6 +525,9 @@ export default function Home() {
               <Button 
                 className="w-full mt-8 bg-white text-gray-800 hover:bg-gray-50 font-semibold"
                 size="lg"
+                onClick={() => {
+                  window.open('tel:+919716192739', '_blank');
+                }}
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
