@@ -495,11 +495,11 @@ export default function Home() {
                       <Phone className="w-4 h-4 mr-2" />
                       +91 9716192739
                     </a>
-                    <a href="tel:+919716192738" className="text-gray-700 hover:text-gray-900 transition-colors">
+                    <a href="tel:+919716192738" className="flex items-center text-gray-700 hover:text-gray-900 transition-colors">
                       <Phone className="w-4 h-4 mr-2" />
                       +91 9716192738
                     </a>
-                    <a href="tel:+919310079445" className="text-gray-700 hover:text-gray-900 transition-colors">
+                    <a href="tel:+919310079445" className="flex items-center text-gray-700 hover:text-gray-900 transition-colors">
                       <Phone className="w-4 h-4 mr-2" />
                       +91 9310079445
                     </a>
