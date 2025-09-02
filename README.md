@@ -1,6 +1,6 @@
 # Amarjyoti Ply - Next.js Website
 
-A modern, responsive website for Shri Om Plywood Pvt. Ltd. built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive website for Shri Om Plywood Pvt. Ltd. built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## 🏗️ Project Structure
 
@@ -14,22 +14,25 @@ amarjyoti/
 │   │   └── contact/             # Contact page
 │   ├── components/              # Reusable components
 │   │   ├── layout/              # Layout components
-│   │   │   ├── header.tsx       # Site header
+│   │   │   ├── client-header.tsx # Site header
 │   │   │   └── footer.tsx       # Site footer
-│   │   ├── site/                # Site-specific components
-│   │   │   ├── hero.tsx         # Hero section
-│   │   │   ├── about.tsx        # About section
-│   │   │   ├── products.tsx     # Products section
-│   │   │   ├── sustainability.tsx # Sustainability section
-│   │   │   ├── clientele.tsx    # Clientele section
-│   │   │   ├── contact-cta.tsx  # Contact CTA section
-│   │   │   └── section-title.tsx # Section title component
 │   │   ├── ui/                  # UI components (shadcn/ui)
-│   │   └── theme-provider.tsx   # Theme provider
+│   │   │   ├── button.tsx       # Button component
+│   │   │   ├── card.tsx         # Card component
+│   │   │   ├── input.tsx        # Input component
+│   │   │   ├── label.tsx        # Label component
+│   │   │   ├── separator.tsx    # Separator component
+│   │   │   ├── sheet.tsx        # Sheet component
+│   │   │   ├── skeleton.tsx     # Skeleton component
+│   │   │   └── textarea.tsx     # Textarea component
+│   │   ├── hero.tsx             # Hero section
+│   │   ├── about.tsx            # About section
+│   │   ├── products.tsx         # Products section
+│   │   ├── sustainability.tsx   # Sustainability section
+│   │   └── section-title.tsx    # Section title component
 │   ├── hooks/                   # Custom React hooks
-│   ├── lib/                     # Utility functions and constants
-│   │   ├── utils.ts             # Utility functions
-│   │   └── constants.ts         # Shared constants
+│   ├── lib/                     # Utility functions
+│   │   └── utils.ts             # Utility functions
 │   ├── types/                   # TypeScript type definitions
 │   ├── globals.css              # Global styles
 │   ├── layout.tsx               # Root layout
@@ -45,7 +48,7 @@ amarjyoti/
 
 ## 🚀 Features
 
-- **Next.js 14** with App Router
+- **Next.js 15** with App Router
 - **TypeScript** for type safety
 - **Tailwind CSS** for styling
 - **shadcn/ui** for UI components
@@ -79,13 +82,13 @@ pnpm dev
 
 1. Create a new folder in `app/(pages)/` for your page
 2. Add a `page.tsx` file with your page component
-3. Update navigation in `app/lib/constants.ts`
+3. Update navigation in your components as needed
 
 ### Adding New Components
 
 1. Create components in `app/components/`
 2. Use TypeScript interfaces from `app/types/`
-3. Import shared constants from `app/lib/constants.ts`
+3. Import shared utilities from `app/lib/utils.ts`
 
 ### Styling
 
@@ -95,7 +98,7 @@ pnpm dev
 
 ## 📱 Pages
 
-- **Home** (`/`) - Landing page with hero, about, products, and contact sections
+- **Home** (`/`) - Landing page with hero, about, and products sections
 - **About** (`/about`) - Company information and history
 - **Products** (`/products`) - Product catalog and specifications
 - **Sustainability** (`/sustainability`) - Environmental practices and commitments
