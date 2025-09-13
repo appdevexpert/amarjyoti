@@ -40,6 +40,7 @@ export default function Home() {
       name: "Plywood",
       description: "Durable plywood made from eucalyptus & poplar wood",
       sizes: ["8x4", "8x3", "7x4", "7x3", "6x4", "6x3"],
+      thicknesses: ["4mm", "6mm", "8mm", "9mm", "10mm", "12mm", "15mm", "18mm"],
       grades: ["MR", "Commercial", "Packing", "Furniture"],
 
       image: "/1.jpeg",
@@ -63,7 +64,7 @@ export default function Home() {
   const advantages = [
     {
       icon: Factory,
-      title: "In-house Resin Production",
+      title: "Uses Only Plantation Poplar Wood And Eucalyptus Wood Timber",
       description: "Consistent quality control",
     },
     {
@@ -90,7 +91,7 @@ export default function Home() {
     "OEM Trusted: Preferred partner for Original Equipment Manufacturers",
     "Strong Dealer Network: Across Tier 2, Tier 3 cities & Delhi NCR",
     "ISI Approved Quality: Long-term durability at fair pricing",
-    "Sustainable Manufacturing: Solar power & in-house resin",
+    "Sustainable Manufacturing: Solar power & Technical Grade Resins used for plywood",
     "Fast & Flexible Service: Quick turnaround and tailored solutions",
   ];
 
@@ -426,6 +427,26 @@ export default function Home() {
                     </div>
                   )}
 
+                  {product.thicknesses && (
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-amber-500 rounded-full mr-3"></span>
+                        Available Thicknesses
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {product.thicknesses.map((thickness, idx) => (
+                          <Badge
+                            key={idx}
+                            variant="outline"
+                            className="border-amber-300 text-amber-700 bg-amber-50 hover:bg-amber-100"
+                          >
+                            {thickness}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {product.grades && (
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
@@ -572,7 +593,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 scroll-mt-24 bg-white">
+      <section id="contact" className="py-20 scroll-mt-top bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -587,37 +608,16 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <Card className="border-gray-200">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-gray-800">
-                    <Factory className="w-6 h-6 mr-3" />
-                    Factory Address
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700">
-                    48 Km Stone, Village Sampla
-                    <br />
-                    Haryana - 124501
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-gray-200">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-gray-800">
-                    <Building className="w-6 h-6 mr-3" />
-                    Office Address
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700">
-                    Room 201, Vardhman Plaza Corner
-                    <br />
-                    Peeragarhi, Delhi - 110041
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Factory address -> Google Map */}
+              <div className="overflow-hidden rounded-lg aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13990.418742779584!2d76.7102154190636!3d28.761217546469215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d9dff254c764f%3A0x35e7dd91a719923!2sKM%20STONE%2C%204%2C%20Sampla%20-%20Beri%20Rd%2C%20Kultana%2C%20Ismaila-B%2C%20Haryana%20124501!5e0!3m2!1sen!2sin!4v1757745738715!5m2!1sen!2sin"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
 
               <Card className="border-gray-200">
                 <CardHeader>
