@@ -612,10 +612,12 @@ export default function Home() {
               <div className="overflow-hidden rounded-lg aspect-video">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13990.418742779584!2d76.7102154190636!3d28.761217546469215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d9dff254c764f%3A0x35e7dd91a719923!2sKM%20STONE%2C%204%2C%20Sampla%20-%20Beri%20Rd%2C%20Kultana%2C%20Ismaila-B%2C%20Haryana%20124501!5e0!3m2!1sen!2sin!4v1757745738715!5m2!1sen!2sin"
+                  src="https://www.google.com/maps?q=28.7595538,76.7915432&z=16&output=embed"
                   style={{ border: 0 }}
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
+                  loading="lazy"
+                  title="Factory location map"
                 ></iframe>
               </div>
 
